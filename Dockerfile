@@ -1,9 +1,10 @@
-FROM alpine
+ARG PYTHON_VERSION=3.8-alpine
+FROM python:$PYTHON_VERSION
 
 ARG VERSION=2020.11.01.1
 
 RUN set -x \
- && apk add --no-cache ca-certificates curl ffmpeg python gnupg \
+ && apk add --no-cache ca-certificates curl ffmpeg gnupg \
     # Install youtube-dl
     # https://github.com/rg3/youtube-dl
  && curl -Lo /usr/local/bin/youtube-dl https://yt-dl.org/downloads/${VERSION}/youtube-dl \
