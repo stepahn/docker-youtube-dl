@@ -1,6 +1,6 @@
 FROM alpine
 
-ARG VERSION=2019.03.18
+ARG VERSION=2020.11.01.1
 
 RUN set -x \
  && apk add --no-cache ca-certificates curl ffmpeg python gnupg \
